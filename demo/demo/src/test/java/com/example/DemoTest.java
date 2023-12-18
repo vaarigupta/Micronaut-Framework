@@ -31,7 +31,7 @@ class HelloWorldControllerTest {
     void helloWorldEndpointRespondBody() {
 
         var response = client.toBlocking().exchange("/hello",String.class);
-        assertEquals("Hello World !",response.body());
+        assertEquals("Hello World !",response.getBody().get());
         assertEquals(HttpStatus.OK, response.getStatus());
     }
 
