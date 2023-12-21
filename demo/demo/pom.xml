@@ -20,7 +20,7 @@
     <micronaut.runtime>netty</micronaut.runtime>
     <micronaut.aot.enabled>false</micronaut.aot.enabled>
     <micronaut.aot.packageName>com.example.aot.generated</micronaut.aot.packageName>
-    <exec.mainClass>com.example.Application</exec.mainClass>
+    <exec.mainClass>com.example.main.Application</exec.mainClass>
   </properties>
 
   <repositories>
@@ -65,6 +65,11 @@
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.inject</groupId>
+      <artifactId>jakarta.inject-api</artifactId>
+      <version>2.0.1</version>
     </dependency>
   </dependencies>
   <build>
