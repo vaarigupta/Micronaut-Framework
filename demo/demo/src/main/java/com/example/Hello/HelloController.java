@@ -9,9 +9,9 @@ import io.micronaut.http.annotation.Get;
 public class HelloController {
 
 
-    private final HelloService service;
+    private final HelloServiceInterface service;
 
-    public HelloController(HelloService service) {
+    public HelloController(HelloServiceInterface service) {
         this.service = service;
     }
 
