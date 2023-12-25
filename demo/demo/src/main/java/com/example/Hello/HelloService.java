@@ -1,10 +1,8 @@
 package com.example.Hello;
 
-import jakarta.inject.Singleton;
+public class HelloService implements  HelloServiceInterface {
 
-@Singleton
-public class HelloService {
-
+    @Override
     public String HelloFromService() {
         return "Hello from Service!";
     }
