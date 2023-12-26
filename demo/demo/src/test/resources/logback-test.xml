@@ -9,7 +9,8 @@
     </appender>
 
     <logger name="com.example.Hello" level="DEBUG"/>
-    <root level="info">
+    <logger name="io.micronaut.context.condition" level="INFO" />
+    <root level="debug">
         <appender-ref ref="STDOUT" />
     </root>
 </configuration>
