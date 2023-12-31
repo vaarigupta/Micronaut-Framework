@@ -31,11 +31,12 @@ public class SymbolsController {
         return inMemoryStore.getSymbols().get(value);
     }
 
-    @Get("filter{?max}")
-    public List<Symbol> GetSymbolsByQuery(@QueryValue Optional<Integer> max)
+    @Get("filter{?max,offset}")
+    public List<Symbol> GetSymbolsByQuery(@QueryValue Optional<Integer> max, @QueryValue Optional<Integer> offset)
     {
         return inMemoryStore.getSymbols().values()
                 .stream()
+                .skip(offset.orElse(0))
                 .limit(max.orElse(0))
                 .toList();
     }
