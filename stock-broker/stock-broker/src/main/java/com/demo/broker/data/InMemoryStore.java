@@ -17,13 +17,19 @@ public class InMemoryStore {
     private final Map<String, Symbol> symbols = new HashMap<>();
     private static final Logger LOG = LoggerFactory.getLogger(InMemoryStore.class);
     private final Faker faker = new Faker();
+
     @PostConstruct
-    public  void initilaize()
+    public  void initialize()
     {
-        IntStream.range(0,10).forEach(i ->
-                addNewSymbol());
+        initializeWith(10);
     }
 
+    public void initializeWith(int totalEntries)
+    {
+        symbols.clear();
+        IntStream.range(0,totalEntries).forEach(i ->
+                addNewSymbol());
+    }
     private void addNewSymbol()
     {
         var symbol = new Symbol(faker.stock().nsdqSymbol());

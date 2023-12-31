@@ -8,6 +8,7 @@ import io.micronaut.http.client.annotation.Client;
 import io.micronaut.json.tree.JsonNode;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import jakarta.inject.Inject;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,6 +22,12 @@ class SymbolsControllerTest {
     @Inject
     InMemoryStore inMemoryStore;
 
+
+    @BeforeEach
+    void initialize()
+    {
+        inMemoryStore.initializeWith(10);
+    }
     @Test
     void SymbolsEndPointReturnListOfSymbols()
     {
