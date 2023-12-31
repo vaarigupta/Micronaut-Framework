@@ -28,7 +28,7 @@ public class InMemoryStore {
     {
         var symbol = new Symbol(faker.stock().nsdqSymbol());
         symbols.put(symbol.value(),symbol);
-        LOG.debug("Added Symbol {} : ",symbol);
+        LOG.debug("Added Symbol: {}",symbol);
     }
 
 
