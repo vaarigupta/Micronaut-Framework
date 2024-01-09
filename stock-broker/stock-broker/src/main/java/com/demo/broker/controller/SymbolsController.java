@@ -1,12 +1,12 @@
-package com.demo.broker;
+package com.demo.broker.controller;
 
 import com.demo.broker.data.InMemoryStore;
+import com.demo.broker.model.Symbol;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.QueryValue;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

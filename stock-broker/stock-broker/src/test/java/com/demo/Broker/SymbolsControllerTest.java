@@ -1,6 +1,6 @@
 package com.demo.Broker;
 
-import com.demo.broker.Symbol;
+import com.demo.broker.model.Symbol;
 import com.demo.broker.data.InMemoryStore;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.client.HttpClient;

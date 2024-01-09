@@ -1,6 +1,6 @@
 package com.demo.broker.data;
 
-import com.demo.broker.Symbol;
+import com.demo.broker.model.Symbol;
 import jakarta.inject.Singleton;
 import net.datafaker.Faker;
 import org.slf4j.Logger;
