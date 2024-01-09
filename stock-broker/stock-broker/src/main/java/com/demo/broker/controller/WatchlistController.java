@@ -36,6 +36,11 @@ public class WatchlistController {
         return store.GetAccountId(accountId);
     }
 
+   @Get("{accountId}")
+   public Watchlist getWatchlistByAccountId(UUID accountId)
+   {
+       return store.GetWatchlistByAccount(accountId);
+   }
 
     @Get("filter{?max}")
     public List<Symbol> getByFilter(@QueryValue Optional<Integer> max)
