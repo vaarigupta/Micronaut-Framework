@@ -5,6 +5,7 @@ import com.demo.broker.data.InMemoryAccountStore;
 import com.demo.broker.model.Symbol;
 import com.demo.broker.model.Watchlist;
 import com.demo.main.Application;
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.*;
@@ -64,11 +65,11 @@ public class WatchlistController {
         return store.UpdateWatchlistByAccount(accountId,watchlist);
     }
 
-    @Status(HttpStatus.NO_CONTENT)
+
     @Delete
-    public void delete()
+    public HttpResponse<Void> delete()
     {
         store.DeleteWatchlistByAccount(accountId);
-        //return store.GetAccountId(accountId);
+        return HttpResponse.noContent();
     }
 }
